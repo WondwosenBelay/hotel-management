@@ -3,11 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>Hotel Management System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Hello every one this wondwosen</h2>
-    <script src="js/js/js/index.js"></script>
+    <div class="container">
+        <h1>Hotel Management System</h1>
+        <form id="bookingForm">
+            <h2>Guest Information</h2>
+            <label for="guestName">Guest Name:</label>
+            <input type="text" id="guestName" name="guestName" required>
+
+            <label for="guestEmail">Email:</label>
+            <input type="email" id="guestEmail" name="guestEmail" required>
+
+            <label for="roomType">Room Type:</label>
+            <select id="roomType" name="roomType" required>
+                <option value="Single">Single</option>
+                <option value="Double">Double</option>
+                <option value="Suite">Suite</option>
+            </select>
+
+            <label for="checkIn">Check-In Date:</label>
+            <input type="date" id="checkIn" name="checkIn" required>
+
+            <label for="checkOut">Check-Out Date:</label>
+            <input type="date" id="checkOut" name="checkOut" required>
+
+            <button type="submit">Book Room</button>
+        </form>
+
+        <h2>Booked Rooms</h2>
+        <table id="bookingsTable">
+            <thead>
+                <tr>
+                    <th>Guest Name</th>
+                    <th>Email</th>
+                    <th>Room Type</th>
+                    <th>Check-In</th>
+                    <th>Check-Out</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Bookings will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
